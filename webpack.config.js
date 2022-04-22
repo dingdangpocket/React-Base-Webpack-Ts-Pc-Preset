@@ -5,6 +5,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const config = {
+  mode:"production",
   entry: [
     'react-hot-loader/patch',
     './src/index.tsx'
