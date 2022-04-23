@@ -4,7 +4,7 @@ import App from "./App";
 import axios from "axios";
 axios.defaults.baseURL = "https://api.apiopen.top";
 import "./http/axios";
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 var mountNode = document.getElementById("app");
 ReactDOM.render(
   <Router>
