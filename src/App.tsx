@@ -4,7 +4,7 @@ import Row from "@/components/Row";
 import { useEffect } from "react";
 import request from "./http/request";
 import { hot } from "react-hot-loader/root";
-import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import { renderRoutes } from "react-router-config";
 import publicRoutes from "./routes/publicRoutes";
 import adminRoutes from "./routes/adminRoutes";
@@ -30,20 +30,18 @@ const App = (props: Props) => {
   }, []);
   return (
     <>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/home/*" element={<Home />}></Route>
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/description" element={<Description />} />
-          <Route
-            path="/system"
-            element={isAdmin ? <System /> : <p>无权限</p>}
-          ></Route>
-          <Route path="*" element={<p>ERROR-PAGE</p>} />
-        </Routes>
-        <div> Foooter</div>
-      </Router>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/home/*" element={<Home />}></Route>
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/description:id" element={<Description />} />
+        <Route
+          path="/system"
+          element={isAdmin ? <System /> : <p>无权限</p>}
+        ></Route>
+        <Route path="*" element={<p>ERROR-PAGE</p>} />
+      </Routes>
+      <div> Foooter</div>
     </>
   );
 };

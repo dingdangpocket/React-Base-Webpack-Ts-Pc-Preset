@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
+import { useParams } from "react-router-dom";
 const Description = () => {
-  // useEffect(() => {
-  //   console.log("路由参数",props.location.state.id);
-  // }, []);
-  return <div>详情</div>;
+  let {id}:any =useParams()
+  return <div>详情{id}</div>;
 };
 export default Description;
