@@ -78,7 +78,8 @@ const config = {
       '.js'
     ],
     alias: {
-      'react-dom': '@hot-loader/react-dom'
+      'react-dom': '@hot-loader/react-dom',
+      '@': path.resolve(__dirname, './src'),
     }
   },
   plugins: [
@@ -91,7 +92,10 @@ const config = {
       openAnalyzer: false,
     }),
     new MiniCssExtractPlugin()
-  ]
+  ],
+  optimization:{
+    usedExports:true
+  }
 };
 
 module.exports = config;
