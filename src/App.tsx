@@ -11,7 +11,6 @@ interface Props {
   name: string;
 }
 const App = (props: Props) => {
-  const { name } = props;
   const [isAdmin, setIsAdmin] = useState<boolean>(true);
   useEffect(() => {
     void (async () => {
