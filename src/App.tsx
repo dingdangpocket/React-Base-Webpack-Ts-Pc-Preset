@@ -11,7 +11,7 @@ interface Props {
   name: string;
 }
 const App = (props: Props) => {
-  const [isAdmin, setIsAdmin] = useState<boolean>(true);
+  const [isAdmin, setIsAdmin] = useState<boolean>(false);
   useEffect(() => {
     void (async () => {
       const res = await request.other.getData();
@@ -27,10 +27,10 @@ const App = (props: Props) => {
         <Route path="/home/*" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/description:id" element={<Description />} />
-        <Route path="/system" element={isAdmin ? <System /> : <p>无权限</p>} />
+        <Route path="/system" element={isAdmin ? <System /> : <p style={{background:"#9b2723",color:"white",height:"70px",lineHeight:"70px",padding:"5px"}}>对不起您无权访问改页面!</p>} />
         <Route path="*" element={<p>ERROR-PAGE</p>} />
       </Routes>
-      <div> Foooter</div>
+      <button style={{width:"430px",height:"40px",color:"white",background:"green"}} onClick={()=>setIsAdmin(true)}>申请访问权限</button>
     </>
   );
 };

@@ -1,4 +1,4 @@
-export type CardInfo = {
+export type CardInfoType = {
     id: number;
     width:number;
     height:number;

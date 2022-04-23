@@ -10,7 +10,11 @@
         "esModuleInterop": true,
         "target": "es5",
         "allowJs": true,
-        "jsx": "react",
+        "lib": [
+            "dom",
+            "es2015"
+        ],
+        "jsx": "react-jsx",
         "baseUrl": "./",
         "paths": {
             "@/*": ["src/*"]
