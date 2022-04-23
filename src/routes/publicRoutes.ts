@@ -1,6 +1,6 @@
 import Description from "@/pages/description/Description";
 import Home from "@/pages/home/Home";
-import Password from "@/pages/password/Password";
+import Password from "@/pages/home/password/Password";
 import Profile from "@/pages/profile/Profile";
 
 const publicRoutes = [

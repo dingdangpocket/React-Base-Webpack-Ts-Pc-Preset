@@ -1,4 +1,4 @@
-import Password from "@/pages/password/Password";
+import Password from "@/pages/home/password/Password";
 
 const adminRoutes = [
   {

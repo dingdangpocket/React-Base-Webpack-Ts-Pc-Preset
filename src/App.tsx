@@ -17,7 +17,7 @@ import adminRoutes from "./routes/adminRoutes";
 import userRoutes from "./routes/userRoutes";
 import Home from "./pages/home/Home";
 import Description from "./pages/description/Description";
-import Password from "./pages/password/Password";
+import Profile from "./pages/profile/Profile";
 interface Props {
   name: string;
 }
@@ -34,48 +34,15 @@ const App = (props: Props) => {
 
   return (
     <>
-   
-      {/* <Router>
+      <Router>
         <Switch>
-          <Redirect exact from="/" to="/description"></Redirect>
-          <Route path="/home" component={Home}>
-            <Route path="/home/password" component={Password}></Route>
-          </Route>
+          <Redirect exact from="/" to="/home"></Redirect>
+          <Route path="/home" component={Home} ></Route>
+          <Route path="/profile" component={Profile}></Route>
           <Route path="/description" component={Description}></Route>
         </Switch>
-        <Link to="home/password">密码</Link>
-      </Router> */}
-
-      {/* <Router> {renderRoutes(publicRoutes)}</Router> */}
-      {/* <Router>
-        <Switch>
-          {publicRoutes.map(({ path, component, exact, children }) => (
-            <Route key={path} path={path} component={component} exact={exact}>
-              {children?.map((child: any) => {
-                return (
-                  <Route
-                    key={child.path}
-                    path={child.path}
-                    component={child.component}
-                    exact={child.exact}
-                  ></Route>
-                );
-              })}
-            </Route>
-          ))}
-        </Switch>
-      </Router> */}
-
-      {/* <Router>
-        <Switch> */}
-      {/* {publicRoutes.map(({ path, component, ...routes }) => (
-            <Route key={path} path={path} component={component} {...routes} />
-          ))} */}
-      {/* <Route path="/home" component={Home}></Route>
-          <Route path="/description" component={Description}></Route> */}
-      {/* </Switch>
-      </Router> */}
+      </Router>
     </>
   );
 };
-export default App;
+export default hot(App);
