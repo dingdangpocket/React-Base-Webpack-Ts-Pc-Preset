@@ -1,37 +1,9 @@
-# empty-project
+# Base Webpack React Preset
 
-Empty project.
+PureReact Base  Webpack config and RouterV6 TypeScript useContext Axios-Modules..
 
-## Building and running on localhost
+(1) npm install
+(2) npm start
 
-First install dependencies:
-
-```sh
-npm install
 ```
 
-To run in hot module reloading mode:
-
-```sh
-npm start
-```
-
-To create a production build:
-
-```sh
-npm run build-prod
-```
-
-To create a development build:
-
-```sh
-npm run build-dev
-```
-
-## Running
-
-Open the file `dist/index.html` in your browser
-
-## Credits
-
-Made with [createapp.dev](https://createapp.dev/)
