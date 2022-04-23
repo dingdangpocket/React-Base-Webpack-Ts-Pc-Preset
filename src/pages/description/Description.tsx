@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
+import { hot } from "react-hot-loader/root";
 
-export default function Description() {
-  return (
-    <div>Description</div>
-  )
-}
+const Description = () => {
+  return <div>Description</div>;
+};
+export default hot(Description);
