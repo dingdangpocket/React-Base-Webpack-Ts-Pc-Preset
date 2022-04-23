@@ -1,19 +1,12 @@
 import React, { useState } from "react";
-import styles from "./App.module.scss";
-import Row from "@/components/Row";
 import { useEffect } from "react";
 import request from "./http/request";
 import { hot } from "react-hot-loader/root";
-import { Routes, Route, Link } from "react-router-dom";
-import { renderRoutes } from "react-router-config";
-import publicRoutes from "./routes/publicRoutes";
-import adminRoutes from "./routes/adminRoutes";
-import userRoutes from "./routes/userRoutes";
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Description from "./pages/description/Description";
 import Profile from "./pages/profile/Profile";
 import System from "./pages/system/System";
-import Password from "./pages/home/password/Password";
 interface Props {
   name: string;
 }
@@ -31,14 +24,11 @@ const App = (props: Props) => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/home/*" element={<Home />}></Route>
+        <Route path="/" element={<Home />} />
+        <Route path="/home/*" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/description:id" element={<Description />} />
-        <Route
-          path="/system"
-          element={isAdmin ? <System /> : <p>无权限</p>}
-        ></Route>
+        <Route path="/system" element={isAdmin ? <System /> : <p>无权限</p>} />
         <Route path="*" element={<p>ERROR-PAGE</p>} />
       </Routes>
       <div> Foooter</div>
