@@ -8,12 +8,18 @@ const publicRoutes = [
     path: "/",
     component: Home,
     exact: true,
-    children: [{ path: "/home/profile", component: Profile, exact: true }],
+    routes: [{ path: "/home/profile", component: Profile}],
+  },
+  {
+    path: "/home",
+    component: Home,
+    exact: true,
   },
   {
     path: "/description",
     component: Description,
     exact: true,
+    routes: [{ path: "/description/profile", component: Password}],
   },
   {
     path: "/password",

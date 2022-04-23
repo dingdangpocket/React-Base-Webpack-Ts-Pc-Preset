@@ -11,6 +11,7 @@ import {
   Redirect,
   Link,
 } from "react-router-dom";
+import { renderRoutes } from "react-router-config";
 import publicRoutes from "./routes/publicRoutes";
 import adminRoutes from "./routes/adminRoutes";
 import userRoutes from "./routes/userRoutes";
@@ -33,6 +34,7 @@ const App = (props: Props) => {
 
   return (
     <>
+   
       {/* <Router>
         <Switch>
           <Redirect exact from="/" to="/description"></Redirect>
@@ -43,18 +45,26 @@ const App = (props: Props) => {
         </Switch>
         <Link to="home/password">密码</Link>
       </Router> */}
-      <Router>
+
+      {/* <Router> {renderRoutes(publicRoutes)}</Router> */}
+      {/* <Router>
         <Switch>
-          {publicRoutes.map(({ path, component, exact,children }) => (
-            <Route
-              key={path}
-              path={path}
-              component={component}
-              exact={exact}
-            ></Route>
+          {publicRoutes.map(({ path, component, exact, children }) => (
+            <Route key={path} path={path} component={component} exact={exact}>
+              {children?.map((child: any) => {
+                return (
+                  <Route
+                    key={child.path}
+                    path={child.path}
+                    component={child.component}
+                    exact={child.exact}
+                  ></Route>
+                );
+              })}
+            </Route>
           ))}
         </Switch>
-      </Router>
+      </Router> */}
 
       {/* <Router>
         <Switch> */}
@@ -68,4 +78,4 @@ const App = (props: Props) => {
     </>
   );
 };
-export default hot(App);
+export default App;
