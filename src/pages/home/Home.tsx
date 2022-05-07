@@ -6,10 +6,17 @@ import Side from "@/pages/side/Side";
 import { ContentContext } from "../../context/ContextProvider";
 import styles from "./Home.module.scss";
 import UserInfo from "@/components/UserInfo";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function Home() {
   const { state, dispatch } = useContext(ContentContext);
   let navigate = useNavigate();
+
+  const stateRedux: any = useSelector<any>((state) => {
+    console.log("状态机数据", state);
+    return state
+  });
+
   const goDescription = () => {
     navigate("/description" + 2190867637637);
   };

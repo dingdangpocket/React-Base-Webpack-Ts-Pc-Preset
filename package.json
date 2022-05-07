@@ -13,15 +13,21 @@
     "start": "webpack serve --hot --mode development"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.1",
     "axios": "^0.26.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-hot-loader": "^4.13.0",
+    "react-redux": "^7.2.6",
     "react-router-config": "^5.1.1",
-    "react-router-dom": "^6.3.0"
+    "react-router-dom": "^6.3.0",
+    "redux": "^4.1.2",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.4.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.9",
+    "@babel/core": "^7.17.10",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@hot-loader/react-dom": "^17.0.2+4.13.0",
@@ -29,6 +35,8 @@
     "@types/react-dom": "^18.0.2",
     "@types/react-router-config": "^5.0.6",
     "@types/react-router-dom": "^5.3.3",
+    "@types/redux-logger": "^3.0.9",
+    "add": "^2.0.6",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
     "file-loader": "^6.2.0",
@@ -43,6 +51,7 @@
     "webpack": "^5.72.0",
     "webpack-bundle-analyzer": "^4.5.0",
     "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.8.1"
+    "webpack-dev-server": "^4.8.1",
+    "yarn": "^1.22.18"
   }
 }
